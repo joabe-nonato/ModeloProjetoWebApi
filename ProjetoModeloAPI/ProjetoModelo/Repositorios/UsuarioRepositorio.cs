@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProjetoModelo.Data;
-using ProjetoModelo.Models;
-using ProjetoModelo.Repositorios.Interfaces;
+using ProjetoModeloAPI.Data;
+using ProjetoModeloAPI.Models;
+using ProjetoModeloAPI.Repositorios.Interfaces;
 
-namespace ProjetoModelo.Repositorios
+namespace ProjetoModeloAPI.Repositorios
 {
     public class UsuarioRepositorio : IUsuario
     {
@@ -14,12 +14,12 @@ namespace ProjetoModelo.Repositorios
             dbc = padraoDBContext;
         }
 
-        public async Task<UsuarioModel> UsuarioPorId(int id)
+        public async Task<UsuarioModel> RecuperarPorId(int id)
         {
             return await dbc.Usuarios.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<List<UsuarioModel>> UsuarioTodos()
+        public async Task<List<UsuarioModel>> ListarRegistros()
         {
             return await dbc.Usuarios.ToListAsync();
         }
@@ -35,11 +35,11 @@ namespace ProjetoModelo.Repositorios
 
         public async Task<UsuarioModel> Atualizar(UsuarioModel usuario, int id)
         {
-            UsuarioModel registro = await UsuarioPorId(id);
+            UsuarioModel registro = await RecuperarPorId(id);
 
             if (registro == null)
             {
-                throw new Exception($"Usuário não encontrado, ID:{id}");
+                throw new Exception($"Registro não encontrado, ID: {id}");
             }
 
             registro.Ativo = usuario.Ativo;
@@ -55,11 +55,11 @@ namespace ProjetoModelo.Repositorios
 
         public async Task<Boolean> Remover(int id)
         {
-            UsuarioModel registro = await UsuarioPorId(id);
+            UsuarioModel registro = await RecuperarPorId(id);
 
             if (registro == null)
             {
-                throw new Exception($"Usuário não encontrado, ID:{id}");                
+                throw new Exception($"Registro não encontrado, ID: {id}");                
             }
 
             dbc.Usuarios.Remove(registro);

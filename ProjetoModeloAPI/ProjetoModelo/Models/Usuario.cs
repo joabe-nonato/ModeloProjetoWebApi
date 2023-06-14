@@ -1,6 +1,6 @@
 ﻿using ProjetoModeloAPI.Enums;
 
-namespace ProjetoModelo.Models
+namespace ProjetoModeloAPI.Models
 {
     public class UsuarioModel
     {

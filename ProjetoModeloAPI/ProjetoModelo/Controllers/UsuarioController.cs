@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProjetoModelo.Models;
-using ProjetoModelo.Repositorios.Interfaces;
+using ProjetoModeloAPI.Models;
+using ProjetoModeloAPI.Repositorios.Interfaces;
 
-namespace ProjetoModelo.Controllers
+namespace ProjetoModeloAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -18,18 +18,18 @@ namespace ProjetoModelo.Controllers
         [HttpGet]
         public async Task<ActionResult<List<UsuarioModel>>> TodosUsuarios()
         {
-            List<UsuarioModel> registros = await _usuario.UsuarioTodos();
+            List<UsuarioModel> registros = await _usuario.ListarRegistros();
             return Ok(registros);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<UsuarioModel>> UsuarioPorID(int id)
         {
-            UsuarioModel registro = await _usuario.UsuarioPorId(id);
+            UsuarioModel registro = await _usuario.RecuperarPorId(id);
             return Ok(registro);
         }
 
-        [HttpPost]
+        [HttpPost("Adicionar/{id}")]
         public async Task<ActionResult<UsuarioModel>> Adicionar([FromBody] UsuarioModel gravar)
         {
             UsuarioModel registro = await _usuario.Adicionar(gravar);
@@ -37,7 +37,7 @@ namespace ProjetoModelo.Controllers
             return Ok(registro);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("Atualizar/{id}")]
         public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel gravar, int id)
         {
             UsuarioModel registro = await _usuario.Atualizar(gravar, id);
@@ -45,7 +45,7 @@ namespace ProjetoModelo.Controllers
             return Ok(registro);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("Remover/{id}")]
         public async Task<ActionResult<UsuarioModel>> Remover(int id)
         {
             Boolean registro = await _usuario.Remover(id);

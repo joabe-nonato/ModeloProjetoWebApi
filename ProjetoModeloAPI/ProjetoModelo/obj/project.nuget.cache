@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N+6M2OGZOS0icV9CdGDjBUCtYRdtr2LBtU63e+4EKBQvX/GO14T4Bui6U8ufNZf+qTnB3gtPS22ToWqvEDQh/g==",
+  "dgSpecHash": "CA+phiat74bH77BoQ+s7YDTusH4uC0doNpnD4tnRzlT+BhxO+IIkmsAXR6Hdw5gvoGIh6HKxVhjxRQDhOesVfQ==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\pessoal\\modelo\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
+  "projectFilePath": "D:\\Projetos\\pessoal\\ModeloProjetoWebApi\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\joabe.nonato\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\joabe.nonato\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

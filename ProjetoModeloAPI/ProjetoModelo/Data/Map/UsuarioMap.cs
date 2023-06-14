@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using ProjetoModelo.Models;
+using ProjetoModeloAPI.Models;
 
 namespace ProjetoModeloAPI.Data.Map
 {

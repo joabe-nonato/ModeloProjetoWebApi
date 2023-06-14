@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using ProjetoModelo.Data;
-using ProjetoModelo.Repositorios;
-using ProjetoModelo.Repositorios.Interfaces;
+using ProjetoModeloAPI.Data;
+using ProjetoModeloAPI.Repositorios;
+using ProjetoModeloAPI.Repositorios.Interfaces;
 
 namespace ProjetoModelo
 {
@@ -18,12 +18,13 @@ namespace ProjetoModelo
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            #region Minhas configurações
+            #region Registro de repositórios
                         
             builder.Services.AddEntityFrameworkSqlServer()
                 .AddDbContext<PadraoDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
 
             builder.Services.AddScoped<IUsuario, UsuarioRepositorio>();
+            builder.Services.AddScoped<ITarefa, TarefaRepositorio>();
 
             //builder.Services.AddScoped<IUsuario, UsuarioRepositorio>();
 

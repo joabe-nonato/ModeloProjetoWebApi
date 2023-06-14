@@ -3730,11 +3730,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projetos\\pessoal\\modelo\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
+      "projectUniqueName": "D:\\Projetos\\pessoal\\ModeloProjetoWebApi\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
       "projectName": "ProjetoModeloAPI",
-      "projectPath": "D:\\Projetos\\pessoal\\modelo\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
+      "projectPath": "D:\\Projetos\\pessoal\\ModeloProjetoWebApi\\ProjetoModeloAPI\\ProjetoModelo\\ProjetoModeloAPI.csproj",
       "packagesPath": "C:\\Users\\joabe.nonato\\.nuget\\packages\\",
-      "outputPath": "D:\\Projetos\\pessoal\\modelo\\ProjetoModeloAPI\\ProjetoModelo\\obj\\",
+      "outputPath": "D:\\Projetos\\pessoal\\ModeloProjetoWebApi\\ProjetoModeloAPI\\ProjetoModelo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

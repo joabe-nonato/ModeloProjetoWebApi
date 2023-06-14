@@ -1,11 +1,11 @@
-﻿using ProjetoModelo.Models;
+﻿using ProjetoModeloAPI.Models;
 
-namespace ProjetoModelo.Repositorios.Interfaces
+namespace ProjetoModeloAPI.Repositorios.Interfaces
 {
     public interface IUsuario
     {
-        Task<List<UsuarioModel>> UsuarioTodos();
-        Task<UsuarioModel> UsuarioPorId(int id);
+        Task<List<UsuarioModel>> ListarRegistros();
+        Task<UsuarioModel> RecuperarPorId(int id);
 
         Task<UsuarioModel> Adicionar(UsuarioModel usuario);
 
