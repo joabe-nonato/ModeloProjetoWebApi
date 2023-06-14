@@ -1,0 +1,38 @@
+
+Limpar arquivos padrões
+
+Adicionar Entity:
+	+ Microsoft.EntityFrameworkCore
+	+ Microsoft.EntityFrameworkCore.Design
+	+ Microsoft.EntityFrameworkCore.SqlServer
+	+ Microsoft.EntityFrameworkCore.Tools
+
+Configurar "ConnectionStrings"
+	+ appsettings.json
+		+ "ConnectionStrings": {"DataBase": "Server=./;Database=;User ID=;Password=;TrustServerCertificate=True"},
+
+Criar pastas
+	+ Models
+	+ Repositórios
+	+ Data
+
+Adicionar Controllers (API Controllers)
+	+ UsuarioModel.cs
+		+ EndPoint
+
+Adicionar DbContext
+	+ PadraoDBContext
+		+ public DbSet<UsuarioModel> Usuarios { get; set; }
+		
+		
+Adicionar Interface
+	+ Repositórios \ Interfaces
+		IUsuario
+		
+Adicionar Repositorio.cs
+			+ UsuarioRepositorio
+
+		
+Add-migration InitialDB -context PadraoDBContext
+Update-Database InitialDB -context PadraoDBContext
+
